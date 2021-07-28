@@ -1,0 +1,48 @@
+.c-search__button {
+  width: 78px;
+  height: 46px;
+  padding: 12px 23px;
+  border: solid 1px $sub-color;
+  border-radius: 10px; 
+  @include breakpoint(tablet) {
+    width: 136px;
+  }
+}
+
+.c-menuCard {
+  display: flex;
+  flex-direction: column;
+  height: 585px;
+  @include breakpoint(tablet) {
+    flex-direction: row;
+    height: 354px;
+  }
+  @include breakpoint(pc) {
+    height: 471px;
+  }
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.c-menuCard__button {
+  width: 165px;
+  height: 45px;
+  text-align: center;
+  border-radius: 25px; 
+  margin: 0 auto;
+  
+  @include breakpoint(tablet) {
+    width: 200px;
+    height: 50px;
+  }
+
+}
+
+.c-post__button {
+  width: 100%;
+  max-width: 430px;
+  text-align: center;
+  border-radius: 25px;
+}

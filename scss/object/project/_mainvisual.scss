@@ -1,0 +1,76 @@
+.p-mainvisual {
+  position: relative;
+  height: 285px;
+  @include breakpoint(pc) {
+    height: 530px;
+  }
+  
+  &__front {
+    background-image: url("../img/mainvisual-pc.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  &__archive {
+    background-image: url("../img/archive_mainvisual.jpg");
+    background-size: auto;
+    background-position: 25% 45%;
+    @include breakpoint(pc) {
+      height: 240px;
+    }
+    
+    &Back {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: rgba($color: #000000, $alpha: 0.5);
+      width: 100%;
+      height: inherit;
+      @include breakpoint(tablet) {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+      }
+    }
+  }
+
+  &__single {
+    background-image: url("../img/single_mainvisual.jpg");
+    background-size: cover;
+    
+    height: 225px;
+    @include breakpoint(tablet) {
+      height: 500px;
+    }
+
+  }
+
+  &__page {
+    background-image: url("../img/page_mainvisual.jpg");
+    background-size: cover;
+    height: 225px;
+    @include breakpoint(tablet) {
+      height: 500px;
+    }
+  }
+
+  &__title {
+    font-size: 3.6rem;
+    color: $white-color;
+    margin-left: 7%;
+    @include breakpoint(tablet) {
+      font-size: 6rem;
+    }
+  }
+
+  &__subTitle {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: $white-color;
+    margin-left: 7%;
+    @include breakpoint(tablet) {
+      font-size: 1.6rem;
+      margin: 5px 0 0 10px;
+    }
+  }
+
+}

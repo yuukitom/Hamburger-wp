@@ -1,0 +1,187 @@
+.p-main__desc {
+  margin: 5%;
+
+  &Title {
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    @include breakpoint(tablet) {
+      font-size: 3.6rem;
+    }
+  }
+
+  &>p {
+    font-size: 1.6rem;
+  }
+}
+
+.p-menuCard {
+  margin: 5%;
+  @include breakpoint(tablet) {
+    margin: 2% 5%;
+  }
+
+  img {
+    width: 100%;
+    @include breakpoint(tablet) {
+      width: 50%;
+    }
+  }
+
+  &__text {
+    background-color: $archive-back;
+    height: 100%;
+    padding: 30px 6% 30px 6%;
+    @include breakpoint(tablet) {
+      width: 50%;
+    }
+    @include breakpoint(pc) {
+      padding: 50px 6% 60px 6%;
+    }
+    h1 {
+      font-size: 2rem;
+      color: $white-color;
+      margin-bottom: 20px;
+      @include breakpoint(pc) {
+        font-size: 3.6rem;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__desc {
+    height: 65%;
+    h2 {
+      font-size: 1.6rem;
+      color: $white-color;
+      margin-bottom: 10px;
+      @include breakpoint(pc) {
+        font-size: 2.4rem;
+        margin-bottom: 20px;
+      }
+    }
+
+    p {
+      font-size: 1.6rem;
+      color: $white-color;
+      height: 80%;
+      overflow: hidden;
+    }
+  }
+}
+
+.p-menuCard__button {
+  background-color: $white-color;
+  border: solid 1px $sub-color;
+  line-height: 45px;
+  @include breakpoint(tablet) {
+    line-height: 50px;
+  }
+
+  a {
+    display: block;
+    font-size: 1.6rem;
+  }
+}
+
+.p-pagination {
+  height: 25vh;
+  display: flex;
+  align-items: flex-end;
+  margin: 20px;
+  @include breakpoint(tablet) {
+    justify-content: center;
+    margin: 40px;
+  }
+  
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 36px;
+    @include breakpoint(tablet) {
+      width: auto;
+      max-width: 600px;
+      padding: 0;
+    }
+  }
+
+  a, span {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+
+  &__pages {
+    display: none;
+    @include breakpoint(tablet) {
+      display: inline-block;
+      line-height: 35px;
+      margin-right: 20px;
+    }
+  }
+
+  &__prev {
+    position: relative;
+    line-height: 35px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      right: 36px;
+      background-image: url("../img/prev.svg");
+      background-position: center;
+      @include breakpoint(tablet) {
+        position: static;
+        display: inline-block;
+      }
+    }
+
+    span {
+      @include breakpoint(tablet) {
+        display: none;
+      }
+    }
+  }
+
+  &__num {
+    display: none;
+    @include breakpoint(tablet) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 35px;
+      height: 35px;
+      border: solid 1px $sub-color;
+      margin: 0 5px;
+    }
+  }
+
+  &__next {
+    position: relative;
+    line-height: 35px;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      left: 36px;
+      background-image: url("../img/next.svg");
+      background-position: center;
+      @include breakpoint(tablet) {
+        position: static;
+        display: inline-block;
+      }
+    }
+    
+    span {
+      @include breakpoint(tablet) {
+        display: none;
+      }
+    }
+  }
+}
+
+.current {
+  color: $white-color;
+  background-color: $archive-back;
+}

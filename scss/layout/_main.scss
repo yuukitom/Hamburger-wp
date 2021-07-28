@@ -1,0 +1,8 @@
+.l-main__service {
+  
+  @include breakpoint(tablet) {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+

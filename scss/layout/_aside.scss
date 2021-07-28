@@ -1,0 +1,6 @@
+.l-aside {
+  
+  @include breakpoint(pc) {
+    width: 100%;
+  }
+}

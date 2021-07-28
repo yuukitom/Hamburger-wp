@@ -1,0 +1,13 @@
+.p-container__right {
+  position: fixed;
+  left: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all .3s;
+  @include breakpoint(pc) {
+    position: static;
+  }
+
+  &.is-open {
+    left: 0;
+  }
+}
