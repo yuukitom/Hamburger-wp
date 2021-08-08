@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html <?php language_attributes(); ?>>
 
 <head>
   <meta charset="UTF-8">
   <meta name="description" content="ハンバーガーサイト">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>hamburger</title>
+  
+  <!-- 削除予定
+  <title>Hamburger</title>
   <link rel="stylesheet" href="css/ress.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&family=Roboto:wght@500&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/ded60250de.js" crossorigin="anonymous"></script>
+  -->
   <?php wp_head(); ?>
 </head>
 
