@@ -3,10 +3,53 @@
 <div class="l-mainvisual p-mainvisual p-mainvisual__archive">
   <div class="p-mainvisual__archiveBack">
     <h1 class="p-mainvisual__title">Menu:</h1>
-    <p class="p-mainvisual__subTitle">チーズバーガー</p>
+    <p class="p-mainvisual__subTitle"><?php single_cat_title(); ?></p>
   </div>
 </div>
 
+<main>
+  <article>
+    <!-- カテゴリの説明文 -->
+    <?php if (
+      is_category() && //カテゴリページの時
+      !is_paged() &&   //カテゴリページのトップの時
+      category_description()
+    ) : //カテゴリの説明文が空でない時 
+    ?>
+      <section class="p-main__desc">
+        <?php echo category_description(); ?>
+      </section>
+    <?php endif; ?>
+
+    <div>
+      
+      <?php if (have_posts()) :
+        while (have_posts()) :
+          the_post(); ?>
+          <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+            <section class="p-main__menu">
+              <div class="c-menuCard p-menuCard">
+                <?php the_post_thumbnail(); ?>
+                <div class="c-menuCard__text p-menuCard__text">
+                  <h1><?php the_title(); ?></h1>
+                  <div class="c-menuCard__desc p-menuCard__desc">
+                    <?php the_excerpt(); ?>
+                  </div>
+                  <p class="c-menuCard__button p-menuCard__button"><a href="<?php the_permalink($post); ?>">詳しく見る</a></p>
+                </div>
+              </div>
+            </section>
+          </div>
+        <?php endwhile; ?>
+      <?php else : ?>
+        <p class="c-menuCard__none">記事が見つかりませんでした。</p>
+      <?php endif; ?>
+
+    </div>
+  </article>
+</main>
+
+<!--
 <main>
   <article>
     <section class="p-main__desc">
@@ -55,6 +98,7 @@
     </div>
   </article>
 </main>
+-->
 
 <div class="p-pagination">
   <div class="p-pagination__wrapper">
@@ -74,46 +118,6 @@
 </div>
 
 </div><!-- l-container__Left -->
-
-<div class="l-container__right p-container__right">
-  <aside class="l-aside p-aside">
-    <div class="p-aside__btn"><button class="js_navBtn">×</button></div>
-    <h2 class="p-aside__title">Menu</h2>
-    <ul class="p-aside__mainMenu">
-      <li class="p-aside__mainItem"><a href="#">バーガー</a>
-        <ul class="p-aside__subMenu">
-          <li class="p-aside__subItem"><a href="#">ハンバーガー</a></li>
-          <li class="p-aside__subItem"><a href="#">チーズバーガー</a></li>
-          <li class="p-aside__subItem"><a href="#">テリヤキバーガー</a></li>
-          <li class="p-aside__subItem"><a href="#">チキンバーガー</a></li>
-          <li class="p-aside__subItem"><a href="#">アボカドバーガー</a></li>
-          <li class="p-aside__subItem"><a href="#">フィッシュバーガー</a></li>
-          <li class="p-aside__subItem"><a href="#">月見バーガー</a></li>
-          <li class="p-aside__subItem"><a href="#">ベーコンバーガー</a></li>
-        </ul>
-      </li>
-      <li class="p-aside__mainItem"><a href="#">サイド</a>
-        <ul class="p-aside__subMenu">
-          <li class="p-aside__subItem"><a href="#">コーン</a></li>
-          <li class="p-aside__subItem"><a href="#">ナゲット</a></li>
-          <li class="p-aside__subItem"><a href="#">フライドポテト</a></li>
-          <li class="p-aside__subItem"><a href="#">サラダ</a></li>
-        </ul>
-      </li>
-      <li class="p-aside__mainItem"><a href="#">ドリンク</a>
-        <ul class="p-aside__subMenu">
-          <li class="p-aside__subItem"><a href="#">コーヒー（Ice/Hot）</a></li>
-          <li class="p-aside__subItem"><a href="#">紅茶（Ice/Hot）</a></li>
-          <li class="p-aside__subItem"><a href="#">アップル</a></li>
-          <li class="p-aside__subItem"><a href="#">オレンジ</a></li>
-          <li class="p-aside__subItem"><a href="#">グレープ</a></li>
-          <li class="p-aside__subItem"><a href="#">コーラ</a></li>
-        </ul>
-      </li>
-    </ul>
-  </aside>
-</div> <!-- l-container__right -->
-</div> <!-- l-container -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
