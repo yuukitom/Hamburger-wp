@@ -82,3 +82,45 @@ if (!function_exists('remove_default_category_description')) :
 endif;
 //このカスタマイズは「カテゴリー編集」画面のみで適用される。「カテゴリー一覧」画面では適用されないので注意。
 //参考ページ:https://nelog.jp/visual-category-description-editor
+
+function pagination($pages = '', $range = 2){
+    $showitems = ($range * 1)+1;
+    global $paged;
+    if(empty($paged)) $paged = 1;
+    if($pages == ''){
+        global $wp_query;
+        $pages = $wp_query->max_num_pages;
+        if(!$pages){
+            $pages = 1;
+        }
+    }
+    if(1 != $pages){
+        // 画像を使う時用に、テーマのパスを取得
+        $img_pass = get_template_directory_uri();
+        echo "<div class=\"p-pagination\">";
+        echo "<div class=\"p-pagination__wrapper\">";
+        // 「1/2」表示 現在のページ数 / 総ページ数
+        echo "<div class=\"p-pagination__pages\">"."Page ". $paged."/". $pages."</div>";
+        // 「前へ」を表示
+        if($paged > 1) echo "<a class=\"p-pagination__prev\" href='".get_pagenum_link($paged - 1)."'><span>前へ</span></a>";
+        // ページ番号を出力
+        echo "<ol class=\"p-pagination__body\">\n";
+        for ($i=1; $i <= $pages; $i++){
+            if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems )){
+                echo ($paged == $i)? "<li class=\"-current\">".$i."</li>": // 現在のページの数字はリンク無し
+                    "<li><a href='".get_pagenum_link($i)."'>".$i."</a></li>";
+            }
+        }
+        // [...] 表示
+        // if(($paged + 4 ) < $pages){
+        //     echo "<li class=\"notNumbering\">...</li>";
+        //     echo "<li><a href='".get_pagenum_link($pages)."'>".$pages."</a></li>";
+        // }
+        echo "</ol>\n";
+        // 「次へ」を表示
+        if($paged < $pages) echo "<a class=\"p-pagination__next\" href='".get_pagenum_link($paged + 1)."'><span>次へ</span></a>";
+        echo "</div>\n";
+        echo "</div>\n";
+    }
+}
+//参考ページ:https://since-inc.jp/blog/8506
