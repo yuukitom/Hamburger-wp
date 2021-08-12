@@ -32,6 +32,10 @@ Layout
   display: flex;
 }
 
+.l-container__left {
+  width: 100vw;
+}
+
 @media (min-width: 1201px) {
   .l-container__left {
     width: 80%;
@@ -542,18 +546,18 @@ object
   margin: 5%;
 }
 
-.p-main__descTitle {
+.p-main__desc h2 {
   font-size: 2.8rem;
   margin-bottom: 30px;
 }
 
 @media (min-width: 768px) {
-  .p-main__descTitle {
+  .p-main__desc h2 {
     font-size: 3.6rem;
   }
 }
 
-.p-main__desc > p {
+.p-main__desc p {
   font-size: 1.6rem;
 }
 
@@ -568,12 +572,14 @@ object
 }
 
 .p-menuCard img {
-  width: 100%;
+  max-height: 280px;
 }
 
 @media (min-width: 768px) {
   .p-menuCard img {
     width: 50%;
+    height: 100%;
+    max-height: none;
   }
 }
 
@@ -599,17 +605,19 @@ object
   font-size: 2rem;
   color: #fff;
   margin-bottom: 20px;
+  margin-left: -20px;
 }
 
 @media (min-width: 1201px) {
   .p-menuCard__text h1 {
     font-size: 3.6rem;
     margin-bottom: 30px;
+    margin-left: -10%;
   }
 }
 
 .p-menuCard__desc {
-  height: 65%;
+  height: 50%;
 }
 
 .p-menuCard__desc h2 {
@@ -632,6 +640,12 @@ object
   overflow: hidden;
 }
 
+@media (min-width: 1201px) {
+  .p-menuCard__desc p {
+    font-size: 2.4rem;
+  }
+}
+
 .p-menuCard__button {
   background-color: #fff;
   border: solid 1px #707070;
@@ -650,7 +664,7 @@ object
 }
 
 .p-pagination {
-  height: 25vh;
+  height: 15vh;
   display: flex;
   align-items: flex-end;
   margin: 20px;
@@ -667,6 +681,8 @@ object
   display: flex;
   justify-content: space-between;
   width: 100%;
+  font-size: 1.6rem;
+  font-weight: bold;
   padding: 0 36px;
 }
 
@@ -693,6 +709,31 @@ object
     line-height: 35px;
     margin-right: 20px;
   }
+}
+
+.p-pagination__body {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .p-pagination__body {
+    display: flex;
+  }
+}
+
+.p-pagination__body li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border: solid 1px #707070;
+  margin: 0 5px;
+}
+
+.p-pagination__body li a {
+  display: block;
+  padding: 3px 16px;
 }
 
 .p-pagination__prev {
@@ -723,25 +764,10 @@ object
   }
 }
 
-.p-pagination__num {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .p-pagination__num {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 35px;
-    height: 35px;
-    border: solid 1px #707070;
-    margin: 0 5px;
-  }
-}
-
 .p-pagination__next {
   position: relative;
   line-height: 35px;
+  margin-left: auto;
 }
 
 .p-pagination__next::after {
@@ -767,7 +793,7 @@ object
   }
 }
 
-.current {
+.-current {
   color: #fff;
   background-color: #3C2B1C;
 }
