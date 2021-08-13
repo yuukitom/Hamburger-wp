@@ -83,6 +83,7 @@ endif;
 //このカスタマイズは「カテゴリー編集」画面のみで適用される。「カテゴリー一覧」画面では適用されないので注意。
 //参考ページ:https://nelog.jp/visual-category-description-editor
 
+//ページネーション処理
 function pagination($pages = '', $range = 2){
     $showitems = ($range * 1)+1;
     global $paged;
@@ -124,3 +125,4 @@ function pagination($pages = '', $range = 2){
     }
 }
 //参考ページ:https://since-inc.jp/blog/8506
+//ここまでページネーション処理

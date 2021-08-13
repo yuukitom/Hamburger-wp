@@ -58,6 +58,7 @@
     </div>
   </article>
 
+  <!-- ページネーション処理 --> 
   <?php
   if (function_exists('pagination')) { // 関数が定義されていたらtrueになる
     pagination();
