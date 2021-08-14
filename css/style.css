@@ -1025,7 +1025,7 @@ object
   }
 }
 
-.p-aside__mainItem a {
+.p-aside__mainMenu a {
   display: block;
   font-size: 2.4rem;
   font-weight: bold;
@@ -1033,7 +1033,7 @@ object
   padding: 20px 0;
 }
 
-.p-aside__subItem a {
+.p-aside .sub-menu a {
   font-size: 2.0rem;
   font-weight: normal;
   padding: 10px;
