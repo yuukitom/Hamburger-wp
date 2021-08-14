@@ -1,9 +1,12 @@
 <footer class="l-footer p-footer">
   <ul class="p-footer__info">
-    <li class="p-footer__infoItem"><a href="#">ショップ情報</a></li>
-    <li class="p-footer__infoItem"><a href="#">ヒストリー</a></li>
+    <?php wp_nav_menu(
+      array(
+        'theme_location' => 'footer_menu',
+      )
+    ); ?>
   </ul>
-  <p>Copyright: RaiseTech</p>
+  <p>Copyright: <?php bloginfo("name"); ?></p>
 </footer>
 
 <?php wp_footer(); ?>

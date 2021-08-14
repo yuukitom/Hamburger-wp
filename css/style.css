@@ -1049,6 +1049,10 @@ object
   padding: 30px 0;
 }
 
+.p-footer__info ul {
+  display: flex;
+}
+
 .p-footer__info li:first-child {
   padding-right: 10px;
 }
