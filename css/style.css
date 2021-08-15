@@ -139,6 +139,18 @@ object
   }
 }
 
+.c-menuCard__none {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 5%;
+}
+
+@media (min-width: 1201px) {
+  .c-menuCard__none {
+    font-size: 3.6rem;
+  }
+}
+
 .c-post__button {
   width: 100%;
   max-width: 430px;
