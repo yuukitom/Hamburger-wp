@@ -84,11 +84,11 @@ endif;
 //参考ページ:https://nelog.jp/visual-category-description-editor
 
 //ページネーション処理
-function pagination($pages = '', $range = 2)
+function pagination($pages = '', $range = 10) //$pages：総ページ数, $range：ページネーションを表示する数を設定する数値
 {
-    $showitems = ($range * 1) + 1;
+    $showitems = ($range * 1) + 1; //$showitems：ページネーションを表示する数を設定する数値
     global $paged;
-    if (empty($paged)) $paged = 1;
+    if (empty($paged)) $paged = 1; //$paged：現在のページ番号
     if ($pages == '') {
         global $wp_query;
         $pages = $wp_query->max_num_pages;
