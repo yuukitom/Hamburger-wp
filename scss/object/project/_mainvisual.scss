@@ -4,7 +4,7 @@
   @include breakpoint(pc) {
     height: 530px;
   }
-  
+
   &__front {
     background-image: url("../img/mainvisual-pc.jpg");
     background-size: cover;
@@ -17,7 +17,7 @@
     @include breakpoint(pc) {
       height: 240px;
     }
-    
+
     &Back {
       display: flex;
       flex-direction: column;
@@ -34,14 +34,27 @@
   }
 
   &__single {
-    background-image: url("../img/single_mainvisual.jpg");
-    background-size: cover;
-    
     height: 225px;
     @include breakpoint(tablet) {
       height: 500px;
     }
 
+    h1 {
+      position: relative;
+      background-color: black;
+      opacity: 0.4;
+    }
+
+    img {
+      position: absolute;
+      z-index: -1;
+      width: 100vw;
+      height: 225px;
+      object-fit: cover;
+      @include breakpoint(tablet) {
+        height: 500px;
+      }
+    }
   }
 
   &__page {
@@ -72,5 +85,4 @@
       margin: 5px 0 0 10px;
     }
   }
-
 }
