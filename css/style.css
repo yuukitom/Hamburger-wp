@@ -317,8 +317,6 @@ object
 
 .p-mainvisual__single h1 {
   position: relative;
-  background-color: black;
-  opacity: 0.4;
 }
 
 .p-mainvisual__single img {
@@ -357,6 +355,11 @@ object
   .p-mainvisual__title {
     font-size: 6rem;
   }
+}
+
+.p-mainvisual__title--highlight {
+  background-color: black;
+  opacity: 0.4;
 }
 
 .p-mainvisual__subTitle {

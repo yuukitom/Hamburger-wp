@@ -41,8 +41,7 @@
 
     h1 {
       position: relative;
-      background-color: black;
-      opacity: 0.4;
+      
     }
 
     img {
@@ -72,6 +71,10 @@
     margin-left: 7%;
     @include breakpoint(tablet) {
       font-size: 6rem;
+    }
+    &--highlight {
+      background-color: black;
+      opacity: 0.4;
     }
   }
 

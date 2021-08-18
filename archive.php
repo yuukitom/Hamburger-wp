@@ -58,7 +58,7 @@
     </div>
   </article>
 
-  <!-- ページネーション処理 --> 
+  <!-- ページネーション処理 -->
   <?php
   if (function_exists('pagination')) { // 関数が定義されていたらtrueになる
     pagination();
@@ -82,7 +82,7 @@
     </div>
   </div>
       -->
-      
+
 </main>
 
 </div><!-- l-container__Left -->

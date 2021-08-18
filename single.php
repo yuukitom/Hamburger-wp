@@ -6,7 +6,7 @@
   <?php if (have_posts()) : ?>
     <!-- 投稿データがあるかの条件分岐。-->
     <div class="l-mainvisual p-mainvisual p-mainvisual__single">
-      <h1 class="p-mainvisual__title"><?php the_title(); ?></h1>
+      <h1 class="p-mainvisual__title p-mainvisual__title--highlight"><?php the_title(); ?></h1>
       <?php the_post_thumbnail(); ?>
     </div>
 
