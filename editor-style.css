@@ -1,0 +1,48 @@
+h1 {
+  font-size: 2rem;
+  background-color: black;
+  opacity: 0.4;
+}
+
+h2 {
+  font-size: 2.8rem;
+  margin: 5% 0;
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 3.6rem;
+  }
+}
+
+p {
+  font-size: 1.6rem;
+  margin: 2.5% 0;
+}
+
+h3 {
+  font-size: 2.4rem;
+  margin-bottom: 5%;
+}
+
+@media (min-width: 768px) {
+  h3 {
+    font-size: 2.8rem;
+  }
+}
+
+h4, h5, h6 {
+  font-size: 2rem;
+  margin-bottom: 5%;
+}
+
+blockquote {
+  background-color: #F5F5F5;
+  padding: 5%;
+  margin-bottom: 5%;
+}
+
+cite {
+  font-size: 1.6rem;
+  font-style: normal;
+}

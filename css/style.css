@@ -306,13 +306,31 @@ object
 }
 
 .p-mainvisual__single {
-  background-image: url("../img/single_mainvisual.jpg");
-  background-size: cover;
   height: 225px;
 }
 
 @media (min-width: 768px) {
   .p-mainvisual__single {
+    height: 500px;
+  }
+}
+
+.p-mainvisual__single h1 {
+  position: relative;
+  background-color: black;
+  opacity: 0.4;
+}
+
+.p-mainvisual__single img {
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  height: 225px;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .p-mainvisual__single img {
     height: 500px;
   }
 }
@@ -834,7 +852,7 @@ object
 
 .p-post p {
   font-size: 1.6rem;
-  margin-bottom: 5%;
+  margin: 2.5% 0;
 }
 
 .p-post h3 {
@@ -848,7 +866,9 @@ object
   }
 }
 
-.p-post h4, .p-post h5, .p-post h6 {
+.p-post h4,
+.p-post h5,
+.p-post h6 {
   font-size: 2rem;
   margin-bottom: 5%;
 }
@@ -996,6 +1016,26 @@ object
 @media (min-width: 768px) {
   .p-post__button {
     padding: 40px 0;
+  }
+}
+
+.p-post .p-tag {
+  margin: 2.5% 0 5% 0;
+}
+
+.p-post .p-tag span {
+  margin-right: 10px;
+}
+
+.p-post .p-tag a {
+  font-size: 1.6rem;
+  text-decoration: underline;
+  color: cornflowerblue;
+}
+
+@media (min-width: 768px) {
+  .p-post .p-tag a {
+    font-size: 2rem;
   }
 }
 

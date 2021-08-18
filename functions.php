@@ -150,3 +150,11 @@ function hamburger_widgets_init()
     );
 }
 add_action('widgets_init', 'hamburger_widgets_init');
+
+// editor.styleの読み込み（Gutenberg用）
+function hamburger_theme_support_setup() {
+    add_theme_support( 'editor-styles' );
+    add_editor_style( 'editor-style.css' );
+  }
+  add_action( 'after_setup_theme', 'hamburger_theme_support_setup' );
+//参考ページ：https://techmemo.biz/wordpress/add-gutenberg-editor-style/
