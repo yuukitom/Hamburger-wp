@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="l-mainvisual p-mainvisual p-mainvisual__front">
-  <h2 class="p-mainvisual__title">ダミーサイト</h2>
+  <h2 class="p-mainvisual__title"><?php bloginfo('description'); ?></h2>
 </div>
 
 <main>
@@ -9,7 +9,7 @@
     <section>
       <ul class="l-main__service p-main__service">
         <li class="p-main__serviceInner u-mb20">
-          <a href="#">
+          <a href="<?php echo esc_url(get_category_link(15)); ?>">
             <h2 class="p-main__serviceTitle">Take Out</h2>
           </a>
           <div>
@@ -25,7 +25,7 @@
         </li>
 
         <li class="p-main__serviceInner">
-          <a href="#">
+          <a href="<?php echo esc_url(get_category_link(16)); ?>">
             <h2 class="p-main__serviceTitle">Eat In</h2>
           </a>
           <div>

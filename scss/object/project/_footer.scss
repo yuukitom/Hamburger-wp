@@ -11,14 +11,7 @@
     }
 
     li {
-      &:first-child {
-        padding-right: 10px;
-        
-      }
-
-      &:nth-child(2) {
-        padding-left: 8px;
-      }
+      padding: 0 10px;
     }
 
     li + li {

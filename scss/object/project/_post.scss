@@ -175,5 +175,37 @@
   }
 
 }
+// p-post
+
+////////////////////////////
+/////問い合わせフォーム
+///////////////////////////
+
+input, textarea {
+  border: solid 1px #868e96;
+}
+
+.btn {
+  font-size: 14px;
+  font-weight: 800;
+  color: #fff;
+  padding: 15px 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 0;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.btn-primary {
+  background-color: #0085A1;
+  border-color: #0085A1;
+  border-radius: 4px;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  background-color: #00657b;
+  border-color: #00657b;
+  
+}
 
 

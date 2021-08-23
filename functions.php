@@ -2,6 +2,9 @@
 add_theme_support('menus');
 add_theme_support('title-tag');
 add_theme_support('post-thumbnails');
+add_theme_support('automatic-feed-links');
+add_theme_support('custom-header');
+add_theme_support("custom-background");
 
 //タイトル出力
 function hamburger_title($title)
@@ -152,9 +155,10 @@ function hamburger_widgets_init()
 add_action('widgets_init', 'hamburger_widgets_init');
 
 // editor.styleの読み込み（Gutenberg用）
-function hamburger_theme_support_setup() {
-    add_theme_support( 'editor-styles' );
-    add_editor_style( 'editor-style.css' );
-  }
-  add_action( 'after_setup_theme', 'hamburger_theme_support_setup' );
+function hamburger_theme_support_setup()
+{
+    add_theme_support('editor-styles');
+    add_editor_style('editor-style.css');
+}
+add_action('after_setup_theme', 'hamburger_theme_support_setup');
 //参考ページ：https://techmemo.biz/wordpress/add-gutenberg-editor-style/
