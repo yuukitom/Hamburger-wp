@@ -64,25 +64,6 @@
     pagination();
   } ?>
 
-  <!--  htmlの時のコード（※ページネーション機能がうまくいったら削除）
-  <div class="p-pagination">
-    <div class="p-pagination__wrapper">
-      <span class="p-pagination__pages">page 1/10</span>
-      <a href="#" class="p-pagination__prev"><span>前へ</span></a>
-      <a href="#" class="p-pagination__num current">1</a>
-      <a href="#" class="p-pagination__num">2</a>
-      <a href="#" class="p-pagination__num">3</a>
-      <a href="#" class="p-pagination__num">4</a>
-      <a href="#" class="p-pagination__num">5</a>
-      <a href="#" class="p-pagination__num">6</a>
-      <a href="#" class="p-pagination__num">7</a>
-      <a href="#" class="p-pagination__num">8</a>
-      <a href="#" class="p-pagination__num">9</a>
-      <a href="#" class="p-pagination__next"><span>次へ</span></a>
-    </div>
-  </div>
-      -->
-
 </main>
 
 </div><!-- l-container__Left -->
