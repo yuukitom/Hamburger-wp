@@ -157,13 +157,77 @@
     }
   }
 
+  .wp-block-image {
+    margin: 5% 0;
+
+    img {
+      width: 100%;
+      height: 30vw;
+      object-fit: cover;
+    }
+  }
+
+  .wp-block-media-text {
+    grid-template-columns: 42% auto;
+    margin: 5% 0;
+
+    img {
+      height: 50%;
+      vertical-align: bottom;
+    }
+  }
+
+  //「メディアとテキスト」の
+  .wp-block-media-text.is-vertically-aligned-center .wp-block-media-text__content,
+  .wp-block-media-text.is-vertically-aligned-center .wp-block-media-text__media,
+  .wp-block-media-text .wp-block-media-text__content,
+  .wp-block-media-text .wp-block-media-text__media {
+    align-self: flex-start;
+  }
+
+  //「ギャラリー」の画像のレスポンシブ対応のカラム設定を変更
+  .blocks-gallery-grid {
+    justify-content: space-between;
+  }
+
+  .wp-block-gallery.is-cropped .blocks-gallery-item {
+    width: 100%;
+    flex-grow: 0;
+    margin-right: 0;
+    @include breakpoint(tablet) {
+      width: 49%;
+    }
+    @include breakpoint(pc) {
+      width: 32%;
+    }
+  }
+
+  ul {
+    margin: 1em 0;
+    padding-left: 40px;
+  }
+
+  //ギャラリー画像のulタグのみpadding-leftを0に
+  .blocks-gallery-grid {
+    padding-left: 0;
+  }
+
+  ol {
+    margin: 1em 0;
+    padding-left: 40px;
+  }
+  
+  li {
+    list-style-type: inherit;
+  }
+
   .p-tag {
     margin: 2.5% 0 5% 0;
 
     span {
       margin-right: 10px;
     }
-  
+
     a {
       font-size: 1.6rem;
       text-decoration: underline;
@@ -173,7 +237,6 @@
       }
     }
   }
-
 }
 // p-post
 
@@ -181,7 +244,8 @@
 /////問い合わせフォーム
 ///////////////////////////
 
-input, textarea {
+input,
+textarea {
   border: solid 1px #868e96;
 }
 
@@ -193,19 +257,18 @@ input, textarea {
   letter-spacing: 1px;
   text-transform: uppercase;
   border-radius: 0;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .btn-primary {
-  background-color: #0085A1;
-  border-color: #0085A1;
+  background-color: #0085a1;
+  border-color: #0085a1;
   border-radius: 4px;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
   background-color: #00657b;
   border-color: #00657b;
-  
 }
-
-

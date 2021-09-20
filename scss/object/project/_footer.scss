@@ -19,8 +19,11 @@
     }
 
     a {
-      font-size: 2rem;
+      font-size: 1.4rem;
       color: $white-color;
+      @include breakpoint(tablet) {
+        font-size: 2rem;
+      }
     }
 
   }

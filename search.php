@@ -25,7 +25,7 @@
         }
         ?>
 
-        <? while (have_posts()) : the_post(); ?>
+        <?php while (have_posts()) : the_post(); ?>
           <!-- 表示する投稿データがあれば繰り返し処理開始-->
           <!-- 次の投稿データを表示 -->
 

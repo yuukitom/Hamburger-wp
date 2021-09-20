@@ -1,10 +1,24 @@
 <?php
-add_theme_support('menus');
 add_theme_support('title-tag');
 add_theme_support('post-thumbnails');
 add_theme_support('automatic-feed-links');
 add_theme_support('custom-header');
 add_theme_support("custom-background");
+
+//Gutenberg用スタイルの読み込み
+add_theme_support( 'wp-block-styles' );
+ 
+//「幅広」と「全幅」に対応
+add_theme_support( 'align-wide' );
+
+//Gutenbergで埋め込んだ動画がレスポンシブに対応する機能を有効にする
+add_theme_support( 'responsive-embeds' );
+
+//HTML5のタグで出力
+add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
+
+add_theme_support( 'custom-logo' ); 
+
 
 //タイトル出力
 function hamburger_title($title)
@@ -162,3 +176,48 @@ function hamburger_theme_support_setup()
 }
 add_action('after_setup_theme', 'hamburger_theme_support_setup');
 //参考ページ：https://techmemo.biz/wordpress/add-gutenberg-editor-style/
+
+if (!isset($content_width)) {
+    $content_width = 1920;
+}
+
+register_block_style(
+    'core/heading',
+    array(
+        'name'         => 'design01',
+        'label'        => 'デザイン01',
+        'inline_style' => '.is-style-design01 { 
+            border-left: solid 8px orange; 
+            padding-left: 12px;
+        }',
+    )
+);
+
+//ブロックスタイルの設定
+register_block_style(
+    'core/heading',
+    array(
+        'name'         => 'design02',
+        'label'        => 'デザイン02',
+        'inline_style' => '.is-style-design02 { 
+            padding: 20px 10px 15px;
+            border-radius: 10px;
+            background: #f5d742;
+        }
+        .is-style-design02::before {
+            content: "●";
+            color: #ffffff;
+            margin-right: 10px;
+        }',
+    )
+);
+
+//ブロックパターンの登録
+register_block_pattern(
+    'wpdocs-my-plugin/my-awesome-pattern',
+    array(
+        'title'       => __('Two buttons', 'wpdocs-my-plugin'),
+        'description' => _x('Two horizontal buttons, the left button is filled in, and the right button is outlined.', 'Block pattern description', 'wpdocs-my-plugin'),
+        'content'     => "<!-- wp:buttons {\"align\":\"center\"} -->\n<div class=\"wp-block-buttons aligncenter\"><!-- wp:button {\"backgroundColor\":\"very-dark-gray\",\"borderRadius\":0} -->\n<div class=\"wp-block-button\"><a class=\"wp-block-button__link has-background has-very-dark-gray-background-color no-border-radius\">" . esc_html__('Button One', 'wpdocs-my-plugin') . "</a></div>\n<!-- /wp:button -->\n\n<!-- wp:button {\"textColor\":\"very-dark-gray\",\"borderRadius\":0,\"className\":\"is-style-outline\"} -->\n<div class=\"wp-block-button is-style-outline\"><a class=\"wp-block-button__link has-text-color has-very-dark-gray-color no-border-radius\">" . esc_html__('Button Two', 'wpdocs-my-plugin') . "</a></div>\n<!-- /wp:button --></div>\n<!-- /wp:buttons -->",
+    )
+);

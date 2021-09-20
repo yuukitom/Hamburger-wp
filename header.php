@@ -9,6 +9,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
   <div class="l-container">
     <div class="l-container__left">
       <header class="l-header p-header">
