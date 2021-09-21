@@ -9,7 +9,13 @@
     <section>
       <ul class="l-main__service p-main__service">
         <li class="p-main__serviceInner u-mb20">
-          <a href="<?php echo esc_url(get_category_link(15)); ?>">
+          <?php 
+            $cat_takeout = get_category_by_slug('takeout');
+            $takeout_id = $cat_takeout->term_id;
+            $cat_eatin = get_category_by_slug('eatin');
+            $eatin_id = $cat_eatin->term_id;
+          ?>
+          <a href="<?php echo esc_url(get_category_link($takeout_id)); ?>">
             <h2 class="p-main__serviceTitle">Take Out</h2>
           </a>
           <div>
@@ -25,7 +31,7 @@
         </li>
 
         <li class="p-main__serviceInner">
-          <a href="<?php echo esc_url(get_category_link(16)); ?>">
+          <a href="<?php echo esc_url(get_category_link($eatin_id)); ?>">
             <h2 class="p-main__serviceTitle">Eat In</h2>
           </a>
           <div>
