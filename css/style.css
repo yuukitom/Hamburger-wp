@@ -729,7 +729,7 @@ object
 .p-menuCard__desc p {
   font-size: 1.6rem;
   color: #fff;
-  height: 80%;
+  height: 75%;
   overflow: hidden;
 }
 
