@@ -67,8 +67,8 @@
     p {
       font-size: 1.6rem;
       color: $white-color;
-      height: 75%;
       overflow: hidden;
+      margin-bottom: 10%;
       @include breakpoint(pc) {
         font-size: 2.4rem;
       }

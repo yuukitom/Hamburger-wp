@@ -12,13 +12,10 @@
 .c-menuCard {
   display: flex;
   flex-direction: column;
-  height: 585px;
   @include breakpoint(tablet) {
     flex-direction: row;
-    height: 354px;
   }
   @include breakpoint(pc) {
-    height: 471px;
   }
 
   img {

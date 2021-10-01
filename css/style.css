@@ -169,19 +169,11 @@ object
 .c-menuCard {
   display: flex;
   flex-direction: column;
-  height: 585px;
 }
 
 @media (min-width: 768px) {
   .c-menuCard {
     flex-direction: row;
-    height: 354px;
-  }
-}
-
-@media (min-width: 1201px) {
-  .c-menuCard {
-    height: 471px;
   }
 }
 
@@ -729,8 +721,8 @@ object
 .p-menuCard__desc p {
   font-size: 1.6rem;
   color: #fff;
-  height: 75%;
   overflow: hidden;
+  margin-bottom: 10%;
 }
 
 @media (min-width: 1201px) {
