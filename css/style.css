@@ -670,7 +670,7 @@ object
 @media (min-width: 768px) {
   .p-menuCard img {
     width: 50%;
-    height: 100%;
+    height: 41vw;
     max-height: none;
   }
 }
